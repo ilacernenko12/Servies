@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -21,12 +22,14 @@ public class SignUpActivity extends AppCompatActivity {
     private DatePickerDialog picker;
     private EditText date;
     private ImageView avatar;
+    private Button submit;
     private static final int GALLERY_REQUEST = 1;
 
     private void init() {
         date = findViewById(R.id.date);
         date.setInputType(InputType.TYPE_NULL);
         avatar = findViewById(R.id.avatar);
+        submit = findViewById(R.id.submit);
     }
 
     @Override
@@ -47,13 +50,15 @@ public class SignUpActivity extends AppCompatActivity {
             picker.show();
         });
 
-        avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent photoGallery = new Intent(Intent.ACTION_GET_CONTENT);
-                photoGallery.setType("image/*");
-                startActivityForResult(Intent.createChooser(photoGallery, "Select picture"), GALLERY_REQUEST);
-            }
+        avatar.setOnClickListener(view -> {
+            Intent photoGallery = new Intent(Intent.ACTION_GET_CONTENT);
+            photoGallery.setType("image/*");
+            startActivityForResult(Intent.createChooser(photoGallery, "Select picture"), GALLERY_REQUEST);
+        });
+
+        submit.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         });
     }
 
