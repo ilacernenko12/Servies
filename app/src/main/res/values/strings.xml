@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Services</string>
+    <string name="button_name">Next</string>
+    <string-array name="choose_role">
+        <item>Choose your role</item>
+        <item>I\'m doing services</item>
+        <item>I\'m looking for a service</item>
+    </string-array>
+    <string name="registration">Don’t have an account?</string>
+    <string name="signup">Sign up</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat</string>
+    <string name="date_of_birthday">Date \n of Birth</string>
+    <string name="button_submit">submit</string>
+</resources>
