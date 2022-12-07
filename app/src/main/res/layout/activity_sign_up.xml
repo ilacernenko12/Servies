@@ -12,9 +12,7 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/main_backround"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:src="@drawable/main_backround"/>
 
     <EditText
         android:id="@+id/name"

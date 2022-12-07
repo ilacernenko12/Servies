@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Intent intent = new Intent(this, SignUpActivity.class);
             startActivity(intent);
         });
+
+        next.setOnClickListener(view -> {
+            Intent intent = new Intent(this, FeedActivity.class);
+            startActivity(intent);
+        });
     }
     // If on click spinner
     @Override

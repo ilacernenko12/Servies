@@ -21,6 +21,7 @@ import java.util.Calendar;
 public class SignUpActivity extends AppCompatActivity {
     private DatePickerDialog picker;
     private EditText date;
+    private EditText name;
     private ImageView avatar;
     private Button submit;
     private static final int GALLERY_REQUEST = 1;
@@ -30,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
         date.setInputType(InputType.TYPE_NULL);
         avatar = findViewById(R.id.avatar);
         submit = findViewById(R.id.submit);
+        name = findViewById(R.id.name);
     }
 
     @Override
