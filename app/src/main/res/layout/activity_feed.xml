@@ -75,7 +75,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@id/user_avatar"
         android:layout_marginTop="25dp"
-        android:layout_marginRight="140dp"
+        android:layout_marginRight="50dp"
         android:fontFamily="@font/be_vietnam_light"
         android:textSize="25sp"
         android:textColor="@color/white"/>

@@ -10,7 +10,9 @@ public class FeedActivity extends AppCompatActivity {
 
     private void init(){
         username = findViewById(R.id.username);
+        username.setText(getIntent().getStringExtra("username"));
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

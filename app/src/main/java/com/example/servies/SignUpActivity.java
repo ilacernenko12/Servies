@@ -7,31 +7,57 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 import com.example.servies.picasso.AvatarTransformation;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.Calendar;
 
 public class SignUpActivity extends AppCompatActivity {
-    private DatePickerDialog picker;
-    private EditText date;
-    private EditText name;
+    // for realtime database
+    private EditText username;
+    private EditText mail;
+    private EditText password;
+    private EditText phoneNumber;
+    private EditText repeatPass;
+
     private ImageView avatar;
     private Button submit;
     private static final int GALLERY_REQUEST = 1;
+    private DatabaseReference appDataBase;
+    private String USER_KEY = "Users";
+
+    // REGEX FOR PASSWORD
+    /*^               # start-of-string
+    (?=.*[0-9])       # a digit must occur at least once
+    (?=.*[a-z])       # a lower case letter must occur at least once
+    (?=.*[A-Z])       # an upper case letter must occur at least once
+    (?=\S+$)          # no whitespace allowed in the entire string
+    .{8,}             # anything, at least eight places though
+    $                 # end-of-string*/
+    private static final String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
+
+    private static final String EMAIL_REGEX = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+            + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
 
     private void init() {
-        date = findViewById(R.id.date);
-        date.setInputType(InputType.TYPE_NULL);
         avatar = findViewById(R.id.avatar);
         submit = findViewById(R.id.submit);
-        name = findViewById(R.id.name);
+        username = findViewById(R.id.name);
+        mail = findViewById(R.id.login);
+        password = findViewById(R.id.password);
+        phoneNumber = findViewById(R.id.phone);
+        repeatPass = findViewById(R.id.password_valid);
+        appDataBase = FirebaseDatabase.getInstance().getReference(USER_KEY);
     }
 
     @Override
@@ -40,18 +66,6 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         init();
 
-        date.setOnClickListener(view -> {
-            final Calendar calendar = Calendar.getInstance();
-            int day = calendar.get(Calendar.DAY_OF_MONTH);
-            int month = calendar.get(Calendar.MONTH);
-            int year = calendar.get(Calendar.YEAR);
-
-            picker = new DatePickerDialog(SignUpActivity.this,
-                    (datePicker, year1, monthOfYear, dayOfMonth)
-                            -> date.setText(dayOfMonth + "." + (monthOfYear + 1) + "." + year1), year, month, day);
-            picker.show();
-        });
-
         avatar.setOnClickListener(view -> {
             Intent photoGallery = new Intent(Intent.ACTION_GET_CONTENT);
             photoGallery.setType("image/*");
@@ -59,12 +73,41 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
         submit.setOnClickListener(view -> {
+            String id = appDataBase.getKey();
+            String name = username.getText().toString();
+            String email = mail.getText().toString();
+            String pass = password.getText().toString();
+            String numberPhone = phoneNumber.getText().toString();
+            String repeatPassword = repeatPass.getText().toString();
+
             Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+
+            // field is empty? | do the passwords match? | regex for e-mail & password
+            if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(pass)
+                    && !TextUtils.isEmpty(numberPhone)) {
+                if (!email.matches(EMAIL_REGEX)) {
+                    mail.setText("");
+                    Toast.makeText(this, "E-mail is not valid", Toast.LENGTH_SHORT).show();
+                } else if (!pass.equals(repeatPassword)) {
+                    password.setText("");
+                    repeatPass.setText("");
+                    Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                } else if (!pass.matches(PASSWORD_REGEX)){
+                    password.setText("");
+                    repeatPass.setText("");
+                    Toast.makeText(this, "A-Z, a-z, 1-9 | 4-8 symbols", Toast.LENGTH_SHORT).show();
+                } else {
+                    User user = new User(id, name, email, pass, numberPhone);
+                    appDataBase.push().setValue(user);
+                    startActivity(intent);
+                }
+            } else {
+                Toast.makeText(this, "One of the input fields is not filled", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
-    // Download photo from gallery
+    // Download photo from gallery |PICASSO|
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -15,7 +15,7 @@
         android:src="@drawable/main_backround"/>
 
     <EditText
-        android:id="@+id/login"
+        android:id="@+id/user_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="210dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/user_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -40,7 +40,7 @@
         android:backgroundTint="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login" />
+        app:layout_constraintTop_toBottomOf="@id/user_email" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -52,7 +52,7 @@
         android:backgroundTint="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/user_password"
         android:background="@android:color/transparent"/>
     <Button
         android:id="@+id/nextButton"
@@ -104,7 +104,7 @@
         android:layout_marginLeft="45dp"
         android:layout_marginTop="212dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/login"
+        app:layout_constraintRight_toLeftOf="@+id/user_email"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_login" />
 
@@ -115,7 +115,7 @@
         android:layout_marginLeft="45dp"
         android:layout_marginTop="288dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/password"
+        app:layout_constraintRight_toLeftOf="@id/user_password"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_password" />
 

@@ -13,6 +13,6 @@
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="repeat_password">Repeat</string>
-    <string name="date_of_birthday">Date \n of Birth</string>
+    <string name="date_of_birthday">Phone \n number</string>
     <string name="button_submit">submit</string>
 </resources>
