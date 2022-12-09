@@ -1,4 +1,4 @@
-package com.example.servies;
+package com.example.servies.firebase;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +11,7 @@ public class User {
     public String email;
     public String password;
     public String phoneNumber;
+    public String imageUri;
     public String userRole;
 
     public User(String id, String username, String email, String password) {

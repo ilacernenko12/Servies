@@ -13,6 +13,16 @@
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="repeat_password">Repeat</string>
-    <string name="date_of_birthday">Phone \n number</string>
+    <string name="phone_number">Phone \n number</string>
     <string name="button_submit">submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile_name">Name Lastname</string>
+    <string name="profile_experience">Job experience</string>
+    <string name="profile_edit">Edit</string>
+    <string name="button_close">Close</string>
+    <string name="button_skills">Skills</string>
+    <string name="profile_country">Country</string>
+    <string name="profile_birthday">Birthday</string>
+    <string name="profile_contacts">Contacts</string>
 </resources>

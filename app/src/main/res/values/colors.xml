@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#B8B4B4</color>
     <color name="tools_bar">#80ECC5C5</color>
-
+    <color name="text_view_fragment">#778899</color>
 </resources>
