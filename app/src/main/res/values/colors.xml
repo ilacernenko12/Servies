@@ -10,4 +10,9 @@
     <color name="background">#B8B4B4</color>
     <color name="tools_bar">#80ECC5C5</color>
     <color name="text_view_fragment">#778899</color>
+    <color name="setting1">#161615</color>
+    <color name="setting2">#221916</color>
+    <color name="setting3">#895230</color>
+    <color name="setting4">#111a1f</color>
+    <color name="setting5">#07080a</color>
 </resources>

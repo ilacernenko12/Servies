@@ -17,12 +17,14 @@ public class FeedActivity extends AppCompatActivity {
     private TextView username;
     private ImageView ivAvatar;
     private ImageButton button_profile;
+    private ImageButton button_setting;
 
     private void init(){
         username = findViewById(R.id.username);
         username.setText(getIntent().getStringExtra("username"));
         ivAvatar = findViewById(R.id.user_avatar);
         button_profile = findViewById(R.id.button_profile);
+        button_setting = findViewById(R.id.setting);
     }
 
     @Override
@@ -36,6 +38,13 @@ public class FeedActivity extends AppCompatActivity {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.profile_container, profileFragment);
             ft.commit();
+        });
+
+        button_setting.setOnClickListener(view -> {
+            SettingFragment settingFragment = new SettingFragment();
+            FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
+            ft1.replace(R.id.profile_container,settingFragment);
+            ft1.commit();
         });
     }
 }

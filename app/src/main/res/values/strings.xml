@@ -25,4 +25,10 @@
     <string name="profile_country">Country</string>
     <string name="profile_birthday">Birthday</string>
     <string name="profile_contacts">Contacts</string>
+    <string name="set1">Notifications and sound</string>
+    <string name="set2">Theme</string>
+    <string name="set3">Confidentiality</string>
+    <string name="set4">Password settings</string>
+    <string name="set5">Language</string>
+    <string name="set6">Support</string>
 </resources>

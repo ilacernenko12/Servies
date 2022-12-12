@@ -67,7 +67,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/profile_avatar"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/icon_user"
@@ -97,11 +97,11 @@
         android:layout_marginBottom="10dp"/>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/name_lastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/profile_name"
-        app:layout_constraintTop_toBottomOf="@id/imageView5"
+        app:layout_constraintTop_toBottomOf="@id/profile_avatar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"/>

@@ -6,12 +6,14 @@
         <entry key="..\:/android/app/src/main/res/drawable/button_main.xml" value="0.2985" />
         <entry key="..\:/android/app/src/main/res/drawable/button_pressed.xml" value="0.2985" />
         <entry key="..\:/android/app/src/main/res/drawable/round_avatar.xml" value="0.348" />
+        <entry key="..\:/android/app/src/main/res/drawable/setting.xml" value="0.348" />
         <entry key="..\:/android/app/src/main/res/drawable/spinner_item.xml" value="0.2985" />
         <entry key="..\:/android/app/src/main/res/font/be_vietnam_light.xml" value="0.396875" />
         <entry key="..\:/android/app/src/main/res/layout/activity_feed.xml" value="0.33" />
         <entry key="..\:/android/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/android/app/src/main/res/layout/activity_sign_up.xml" value="0.5474339035769828" />
         <entry key="..\:/android/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/android/app/src/main/res/layout/fragment_setting.xml" value="0.33" />
       </map>
     </option>
   </component>
