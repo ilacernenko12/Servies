@@ -12,9 +12,7 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/main_backround"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:src="@drawable/main_backround"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,36 +21,50 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="@color/tools_bar">
+        android:background="@color/setting1">
 
         <ImageButton
             android:id="@+id/button_profile"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_user"
-            android:layout_marginLeft="5dp"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_plus"
+            android:background="@color/setting1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"/>
 
         <ImageButton
             android:id="@+id/function"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_function" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_function"
+            android:background="@color/setting1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"/>
 
         <ImageButton
             android:id="@+id/add_feed"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_plus" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_plus"
+            android:background="@color/setting1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"/>
         <ImageButton
             android:id="@+id/message"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_message" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_message"
+            android:background="@color/setting1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"/>
         <ImageButton
             android:id="@+id/setting"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/icon_setting" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_setting"
+            android:background="@color/setting1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"/>
     </LinearLayout>
 
     <ImageView
@@ -82,8 +94,8 @@
 
     <FrameLayout
         android:id="@+id/profile_container"
-        android:layout_width="370dp"
-        android:layout_height="570dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

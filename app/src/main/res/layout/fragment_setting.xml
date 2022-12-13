@@ -14,19 +14,19 @@
         android:orientation="vertical"
         android:background="@color/setting1">
 
-
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:backgroundTint="@color/setting1"
-            android:src="@drawable/icon_close"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="25dp"/>
+            android:id="@+id/button_close"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="320dp"
+            android:background="@color/setting1"
+            android:src="@drawable/icon_close1" />
+
         <FrameLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_marginTop="80dp">
+            android:layout_marginTop="45dp">
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -34,7 +34,6 @@
                 android:background="@color/setting1"
                 android:layout_marginLeft="38dp"
                 android:layout_marginTop="5dp"/>
-
             <Button
                 style="@style/setting1"
                 android:layout_width="match_parent"
@@ -136,7 +135,6 @@
                 android:layout_marginLeft="100dp"
                 style="@style/setting1" />
         </FrameLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

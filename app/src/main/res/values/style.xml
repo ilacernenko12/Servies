@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name = "setting1" parent="@android:style/TextAppearance.Medium">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:textColor">@color/white</item>
-    <item name="android:backgroundTint">@color/setting1</item>
-    <item name="android:fontFamily">@font/be_vietnam_light</item>
-    <item name="android:textSize">13dp</item>
-    <item name="android:textAlignment">textStart</item>
-</style>
-
-
+    <style name = "setting1" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/setting1</item>
+        <item name="android:fontFamily">@font/be_vietnam_light</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
 </resources>
