@@ -2,6 +2,8 @@ package com.example.servies;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.servies.fragments.ProfileFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -90,16 +93,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     String nameByEmail = users.substring(users.indexOf("username=") + 9, users.indexOf('}'));
 
                     if (arrayEmail.contains(e) && arrayPassword.contains(p)){
-                        intent1.putExtra("username", nameByEmail);
                        startActivity(intent1);
                        break;
                     } else {
                         Toast.makeText(MainActivity.this, "E-mail or password is not valid", Toast.LENGTH_SHORT).show();
                     }
                 }
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

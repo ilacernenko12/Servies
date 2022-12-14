@@ -24,12 +24,11 @@
     <string name="profile_contacts">CONTACTS</string>
     <string name="profile_links">LINKS</string>
     <string name="profile_button_edit">Edit</string>
+    <string name="profile_button_save">Save</string>
     <string name="set1">Notifications and sound</string>
     <string name="set2">Theme</string>
     <string name="set3">Confidentiality</string>
     <string name="set4">Password settings</string>
     <string name="set5">Language</string>
     <string name="set6">Support</string>
-    <string name="q">Биография включает в себя не только основные факты (Биографический факт) жизни, такие как рождение, происхождение, образование, служба, работа, семейные отношения и смерть;</string>
-    <string name="w">Биографические произведения обычно не являются художественной литературой, но художественная литература также может использоваться для изображения жизни человека.</string>
 </resources>

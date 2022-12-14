@@ -1,17 +1,15 @@
 package com.example.servies;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.servies.fragments.ProfileFragment;
-import com.squareup.picasso.Picasso;
+import com.example.servies.fragments.SettingFragment;
 
 public class FeedActivity extends AppCompatActivity {
     private TextView username;
