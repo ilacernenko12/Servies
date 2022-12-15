@@ -3,6 +3,7 @@ package com.example.servies;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -90,9 +91,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     arrayEmail.add(userEmail);
                     arrayPassword.add(userPassword);
 
+                    FragmentManager fm = getSupportFragmentManager();
+                    Fragment fragment = fm.findFragmentById(R.id.profile_container);
                     String nameByEmail = users.substring(users.indexOf("username=") + 9, users.indexOf('}'));
 
                     if (arrayEmail.contains(e) && arrayPassword.contains(p)){
+                        /*if (fragment == null) {
+                            fragment = ProfileFragment.newInstance(nameByEmail);
+                            fm.beginTransaction()
+                                    .add(R.id.profile_container, fragment)
+                                    .commit();
+                        }*/
                        startActivity(intent1);
                        break;
                     } else {
